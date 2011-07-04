@@ -295,6 +295,7 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 		UIWebView *webView=[[[UIWebView alloc]initWithFrame:CGRectMake(0, 0, bannerSize.width, bannerSize.height)] autorelease];
 		webView.delegate = (id)self;
 		webView.userInteractionEnabled = NO;
+		webView.backgroundColor = [UIColor clearColor];
 		
 		[webView loadHTMLString:html baseURL:nil];
 		
