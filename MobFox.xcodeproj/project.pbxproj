@@ -1,0 +1,417 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		A7CFC66E13C1DB0C006C0DF4 /* Universal_Framework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A7CFC67B13C1DB0C006C0DF4 /* Build configuration list for PBXAggregateTarget "Universal_Framework" */;
+			buildPhases = (
+				A7CFC66D13C1DB0C006C0DF4 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Universal_Framework;
+			productName = Universal_Framework;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		A7CFC67413C1DB0C006C0DF4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7CFC67213C1DB0C006C0DF4 /* InfoPlist.strings */; };
+		A7CFC69313C1DB72006C0DF4 /* DTXMLDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = A7CFC68013C1DB72006C0DF4 /* DTXMLDocument.h */; };
+		A7CFC69413C1DB72006C0DF4 /* DTXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CFC68113C1DB72006C0DF4 /* DTXMLDocument.m */; };
+		A7CFC69513C1DB72006C0DF4 /* DTXMLElement.h in Headers */ = {isa = PBXBuildFile; fileRef = A7CFC68213C1DB72006C0DF4 /* DTXMLElement.h */; };
+		A7CFC69613C1DB72006C0DF4 /* DTXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CFC68313C1DB72006C0DF4 /* DTXMLElement.m */; };
+		A7CFC69713C1DB72006C0DF4 /* MobFox.h in Headers */ = {isa = PBXBuildFile; fileRef = A7CFC68413C1DB72006C0DF4 /* MobFox.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7CFC69813C1DB72006C0DF4 /* MobFoxAdBrowserViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A7CFC68513C1DB72006C0DF4 /* MobFoxAdBrowserViewController.h */; };
+		A7CFC69913C1DB72006C0DF4 /* MobFoxAdBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CFC68613C1DB72006C0DF4 /* MobFoxAdBrowserViewController.m */; };
+		A7CFC69A13C1DB72006C0DF4 /* MobFoxBannerView.h in Headers */ = {isa = PBXBuildFile; fileRef = A7CFC68713C1DB72006C0DF4 /* MobFoxBannerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7CFC69B13C1DB72006C0DF4 /* MobFoxBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CFC68813C1DB72006C0DF4 /* MobFoxBannerView.m */; };
+		A7CFC69C13C1DB72006C0DF4 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = A7CFC68913C1DB72006C0DF4 /* NSData+Base64.h */; };
+		A7CFC69D13C1DB72006C0DF4 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CFC68A13C1DB72006C0DF4 /* NSData+Base64.m */; };
+		A7CFC69E13C1DB72006C0DF4 /* NSString+MobFox.h in Headers */ = {isa = PBXBuildFile; fileRef = A7CFC68B13C1DB72006C0DF4 /* NSString+MobFox.h */; };
+		A7CFC69F13C1DB72006C0DF4 /* NSString+MobFox.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CFC68C13C1DB72006C0DF4 /* NSString+MobFox.m */; };
+		A7CFC6A013C1DB72006C0DF4 /* NSURL+MobFox.h in Headers */ = {isa = PBXBuildFile; fileRef = A7CFC68D13C1DB72006C0DF4 /* NSURL+MobFox.h */; };
+		A7CFC6A113C1DB72006C0DF4 /* NSURL+MobFox.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CFC68E13C1DB72006C0DF4 /* NSURL+MobFox.m */; };
+		A7CFC6A213C1DB72006C0DF4 /* RedirectChecker.h in Headers */ = {isa = PBXBuildFile; fileRef = A7CFC68F13C1DB72006C0DF4 /* RedirectChecker.h */; };
+		A7CFC6A313C1DB72006C0DF4 /* RedirectChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CFC69013C1DB72006C0DF4 /* RedirectChecker.m */; };
+		A7CFC6A413C1DB72006C0DF4 /* UIView+FindViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A7CFC69113C1DB72006C0DF4 /* UIView+FindViewController.h */; };
+		A7CFC6A513C1DB72006C0DF4 /* UIView+FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CFC69213C1DB72006C0DF4 /* UIView+FindViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A7CFC66B13C1DB0C006C0DF4 /* MobFox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobFox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7CFC67113C1DB0C006C0DF4 /* MobFox-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MobFox-Info.plist"; sourceTree = "<group>"; };
+		A7CFC67313C1DB0C006C0DF4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A7CFC67513C1DB0C006C0DF4 /* MobFox-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MobFox-Prefix.pch"; sourceTree = "<group>"; };
+		A7CFC68013C1DB72006C0DF4 /* DTXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTXMLDocument.h; sourceTree = "<group>"; };
+		A7CFC68113C1DB72006C0DF4 /* DTXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTXMLDocument.m; sourceTree = "<group>"; };
+		A7CFC68213C1DB72006C0DF4 /* DTXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTXMLElement.h; sourceTree = "<group>"; };
+		A7CFC68313C1DB72006C0DF4 /* DTXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTXMLElement.m; sourceTree = "<group>"; };
+		A7CFC68413C1DB72006C0DF4 /* MobFox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobFox.h; sourceTree = "<group>"; };
+		A7CFC68513C1DB72006C0DF4 /* MobFoxAdBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobFoxAdBrowserViewController.h; sourceTree = "<group>"; };
+		A7CFC68613C1DB72006C0DF4 /* MobFoxAdBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobFoxAdBrowserViewController.m; sourceTree = "<group>"; };
+		A7CFC68713C1DB72006C0DF4 /* MobFoxBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobFoxBannerView.h; sourceTree = "<group>"; };
+		A7CFC68813C1DB72006C0DF4 /* MobFoxBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobFoxBannerView.m; sourceTree = "<group>"; };
+		A7CFC68913C1DB72006C0DF4 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		A7CFC68A13C1DB72006C0DF4 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		A7CFC68B13C1DB72006C0DF4 /* NSString+MobFox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MobFox.h"; sourceTree = "<group>"; };
+		A7CFC68C13C1DB72006C0DF4 /* NSString+MobFox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MobFox.m"; sourceTree = "<group>"; };
+		A7CFC68D13C1DB72006C0DF4 /* NSURL+MobFox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+MobFox.h"; sourceTree = "<group>"; };
+		A7CFC68E13C1DB72006C0DF4 /* NSURL+MobFox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+MobFox.m"; sourceTree = "<group>"; };
+		A7CFC68F13C1DB72006C0DF4 /* RedirectChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedirectChecker.h; sourceTree = "<group>"; };
+		A7CFC69013C1DB72006C0DF4 /* RedirectChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedirectChecker.m; sourceTree = "<group>"; };
+		A7CFC69113C1DB72006C0DF4 /* UIView+FindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FindViewController.h"; sourceTree = "<group>"; };
+		A7CFC69213C1DB72006C0DF4 /* UIView+FindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FindViewController.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A7CFC66613C1DB0C006C0DF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A7CFC65E13C1DB0C006C0DF4 = {
+			isa = PBXGroup;
+			children = (
+				A7CFC66F13C1DB0C006C0DF4 /* MobFox */,
+				A7CFC66C13C1DB0C006C0DF4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A7CFC66C13C1DB0C006C0DF4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A7CFC66B13C1DB0C006C0DF4 /* MobFox.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A7CFC66F13C1DB0C006C0DF4 /* MobFox */ = {
+			isa = PBXGroup;
+			children = (
+				A7CFC68413C1DB72006C0DF4 /* MobFox.h */,
+				A7CFC68513C1DB72006C0DF4 /* MobFoxAdBrowserViewController.h */,
+				A7CFC68613C1DB72006C0DF4 /* MobFoxAdBrowserViewController.m */,
+				A7CFC68713C1DB72006C0DF4 /* MobFoxBannerView.h */,
+				A7CFC68813C1DB72006C0DF4 /* MobFoxBannerView.m */,
+				A7CFC67F13C1DB52006C0DF4 /* DTXML */,
+				A7CFC67E13C1DB4F006C0DF4 /* Helpers */,
+				A7CFC67013C1DB0C006C0DF4 /* Supporting Files */,
+			);
+			path = MobFox;
+			sourceTree = "<group>";
+		};
+		A7CFC67013C1DB0C006C0DF4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A7CFC67113C1DB0C006C0DF4 /* MobFox-Info.plist */,
+				A7CFC67213C1DB0C006C0DF4 /* InfoPlist.strings */,
+				A7CFC67513C1DB0C006C0DF4 /* MobFox-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A7CFC67E13C1DB4F006C0DF4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A7CFC68913C1DB72006C0DF4 /* NSData+Base64.h */,
+				A7CFC68A13C1DB72006C0DF4 /* NSData+Base64.m */,
+				A7CFC68B13C1DB72006C0DF4 /* NSString+MobFox.h */,
+				A7CFC68C13C1DB72006C0DF4 /* NSString+MobFox.m */,
+				A7CFC68D13C1DB72006C0DF4 /* NSURL+MobFox.h */,
+				A7CFC68E13C1DB72006C0DF4 /* NSURL+MobFox.m */,
+				A7CFC68F13C1DB72006C0DF4 /* RedirectChecker.h */,
+				A7CFC69013C1DB72006C0DF4 /* RedirectChecker.m */,
+				A7CFC69113C1DB72006C0DF4 /* UIView+FindViewController.h */,
+				A7CFC69213C1DB72006C0DF4 /* UIView+FindViewController.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		A7CFC67F13C1DB52006C0DF4 /* DTXML */ = {
+			isa = PBXGroup;
+			children = (
+				A7CFC68013C1DB72006C0DF4 /* DTXMLDocument.h */,
+				A7CFC68113C1DB72006C0DF4 /* DTXMLDocument.m */,
+				A7CFC68213C1DB72006C0DF4 /* DTXMLElement.h */,
+				A7CFC68313C1DB72006C0DF4 /* DTXMLElement.m */,
+			);
+			name = DTXML;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A7CFC66713C1DB0C006C0DF4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7CFC69713C1DB72006C0DF4 /* MobFox.h in Headers */,
+				A7CFC69A13C1DB72006C0DF4 /* MobFoxBannerView.h in Headers */,
+				A7CFC69313C1DB72006C0DF4 /* DTXMLDocument.h in Headers */,
+				A7CFC69513C1DB72006C0DF4 /* DTXMLElement.h in Headers */,
+				A7CFC69813C1DB72006C0DF4 /* MobFoxAdBrowserViewController.h in Headers */,
+				A7CFC69C13C1DB72006C0DF4 /* NSData+Base64.h in Headers */,
+				A7CFC69E13C1DB72006C0DF4 /* NSString+MobFox.h in Headers */,
+				A7CFC6A013C1DB72006C0DF4 /* NSURL+MobFox.h in Headers */,
+				A7CFC6A213C1DB72006C0DF4 /* RedirectChecker.h in Headers */,
+				A7CFC6A413C1DB72006C0DF4 /* UIView+FindViewController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A7CFC66A13C1DB0C006C0DF4 /* MobFox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7CFC67813C1DB0C006C0DF4 /* Build configuration list for PBXNativeTarget "MobFox" */;
+			buildPhases = (
+				A7CFC66513C1DB0C006C0DF4 /* Sources */,
+				A7CFC66613C1DB0C006C0DF4 /* Frameworks */,
+				A7CFC66713C1DB0C006C0DF4 /* Headers */,
+				A7CFC66813C1DB0C006C0DF4 /* Resources */,
+				A7CFC66913C1DB0C006C0DF4 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MobFox;
+			productName = MobFox;
+			productReference = A7CFC66B13C1DB0C006C0DF4 /* MobFox.framework */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A7CFC66013C1DB0C006C0DF4 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = A7CFC66313C1DB0C006C0DF4 /* Build configuration list for PBXProject "MobFox" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A7CFC65E13C1DB0C006C0DF4;
+			productRefGroup = A7CFC66C13C1DB0C006C0DF4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A7CFC66A13C1DB0C006C0DF4 /* MobFox */,
+				A7CFC66E13C1DB0C006C0DF4 /* Universal_Framework */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A7CFC66813C1DB0C006C0DF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7CFC67413C1DB0C006C0DF4 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A7CFC66913C1DB0C006C0DF4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\nrm -f \"${CONFIGURATION_BUILD_DIR}/FakeFramework\"\nif [ -f \"${CONFIGURATION_BUILD_DIR}/${EXECUTABLE_PATH}\" ]; then\n\tcp \"${CONFIGURATION_BUILD_DIR}/${EXECUTABLE_PATH}\" \"${CONFIGURATION_BUILD_DIR}/FakeFramework\"\nfi\n\t\t\t\t\t";
+		};
+		A7CFC66D13C1DB0C006C0DF4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\n# Assume the target name is the same as the project name\nUFW_TARGET=${PROJECT}\n\nif [ -z ${SDK_NAME} ]; then\n    # Use the latest iphoneos SDK available\n    UFW_GREP_RESULT=$(xcodebuild -showsdks | grep -o \"iphoneos.*$\")\n    while read -r line; do\n        UFW_SDK_VERSION=\"${line}\"\n    done <<< \"${UFW_GREP_RESULT}\"\nelse\n    # Use the SDK specified by XCode\n    UFW_SDK_VERSION=\"${SDK_NAME}\"\nfi\n\nUFW_SDK_VERSION=$(echo \"${UFW_SDK_VERSION}\" | grep -o \"[0-9].*$\")\nUFW_FMWK_DIRNAME=\"${UFW_TARGET}.framework\"\nUFW_EMBEDDED_DIRNAME=\"${UFW_TARGET}.embeddedframework\"\nUFW_EXE_PATH=\"${UFW_FMWK_DIRNAME}/${UFW_TARGET}\"\nUFW_IPHONE_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos\"\nUFW_SIMULATOR_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator\"\nUFW_UNIVERSAL_DIR=\"${BUILD_DIR}/${CONFIGURATION}-universal\"\n\n\n# Build Framework\n\nrm -rf \"${UFW_UNIVERSAL_DIR}\"\n\nxcodebuild -target \"${UFW_TARGET}\" -configuration ${CONFIGURATION} -sdk iphoneos${UFW_SDK_VERSION} BUILD_DIR=${BUILD_DIR} CONFIGURATION_TEMP_DIR=${CONFIGURATION_TEMP_DIR} clean build\nif [ \"$?\" != \"0\" ]; then echo >&2 \"Error: xcodebuild failed\"; exit 1; fi\nxcodebuild -target \"${UFW_TARGET}\" -configuration ${CONFIGURATION} -sdk iphonesimulator${UFW_SDK_VERSION} BUILD_DIR=${BUILD_DIR} CONFIGURATION_TEMP_DIR=${CONFIGURATION_TEMP_DIR} clean build\nif [ \"$?\" != \"0\" ]; then echo >&2 \"Error: xcodebuild failed\"; exit 1; fi\n\nif [ ! -f \"${UFW_IPHONE_DIR}/${UFW_EXE_PATH}\" ]; then\necho \"Framework target \\\"${UFW_TARGET}\\\" had no source files to build from. Make sure your source files have the correct target membership\"\nexit 1\nfi\n\nmkdir -p \"${UFW_UNIVERSAL_DIR}\"\nif [ \"$?\" != \"0\" ]; then echo >&2 \"Error: mkdir failed\"; exit 1; fi\n\ncp -a \"${UFW_IPHONE_DIR}/${UFW_FMWK_DIRNAME}\" \"${UFW_UNIVERSAL_DIR}/${UFW_FMWK_DIRNAME}\"\nif [ \"$?\" != \"0\" ]; then echo >&2 \"Error: cp failed\"; exit 1; fi\n\nlipo -create -output \"${UFW_UNIVERSAL_DIR}/${UFW_EXE_PATH}\" \"${UFW_IPHONE_DIR}/${UFW_EXE_PATH}\" \"${UFW_SIMULATOR_DIR}/${UFW_EXE_PATH}\"\nif [ \"$?\" != \"0\" ]; then echo >&2 \"Error: lipo failed\"; exit 1; fi\n\n\n# Build standard framework structure\n\nmkdir -p \"${UFW_UNIVERSAL_DIR}/${UFW_FMWK_DIRNAME}/Versions/A/Resources\"\nif [ \"$?\" != \"0\" ]; then echo >&2 \"Error: mkdir failed\"; exit 1; fi\n\ncd \"${UFW_UNIVERSAL_DIR}/${UFW_FMWK_DIRNAME}\"\nif [ \"$?\" != \"0\" ]; then echo >&2 \"Error: cd failed\"; exit 1; fi\n\nmv \"${UFW_TARGET}\" \"Versions/A/\"\nif [ \"$?\" != \"0\" ]; then echo >&2 \"Error: mv failed\"; exit 1; fi\n\nmkdir -p Headers\nif [ \"$?\" != \"0\" ]; then echo >&2 \"Error: mkdir failed\"; exit 1; fi\n\nmv \"Headers\" \"Versions/A/\"\nif [ \"$?\" != \"0\" ]; then echo >&2 \"Error: mv failed\"; exit 1; fi\n\nUFW_RESOURCE_LIST=$(ls)\nwhile read -r filename; do\n    if [ \"${filename}\" != \"Versions\" ]; then\n        mv \"${filename}\" \"Versions/A/Resources/\"\n        if [ \"$?\" != \"0\" ]; then echo >&2 \"Error: mv failed\"; exit 1; fi\n    fi\ndone <<< \"${UFW_RESOURCE_LIST}\"\n\ncd Versions\nif [ \"$?\" != \"0\" ]; then echo >&2 \"Error: cd failed\"; exit 1; fi\n\nln -s A Current\nif [ \"$?\" != \"0\" ]; then echo >&2 \"Error: ln failed\"; exit 1; fi\n\ncd ..\nif [ \"$?\" != \"0\" ]; then echo >&2 \"Error: cd failed\"; exit 1; fi\n\nln -s \"Versions/Current/${UFW_TARGET}\"\nif [ \"$?\" != \"0\" ]; then echo >&2 \"Error: ln failed\"; exit 1; fi\n\nln -s \"Versions/Current/Headers\"\nif [ \"$?\" != \"0\" ]; then echo >&2 \"Error: ln failed\"; exit 1; fi\n\nln -s \"Versions/Current/Resources\"\nif [ \"$?\" != \"0\" ]; then echo >&2 \"Error: ln failed\"; exit 1; fi\n\n\n# Build Embedded Framework\n\nmkdir -p \"${UFW_UNIVERSAL_DIR}/${UFW_EMBEDDED_DIRNAME}/Resources\"\nif [ \"$?\" != \"0\" ]; then echo >&2 \"Error: mkdir failed\"; exit 1; fi\n\ncp -a \"${UFW_UNIVERSAL_DIR}/${UFW_FMWK_DIRNAME}\" \"${UFW_UNIVERSAL_DIR}/${UFW_EMBEDDED_DIRNAME}/\"\nif [ \"$?\" != \"0\" ]; then echo >&2 \"Error: cp failed\"; exit 1; fi\n\ncd \"${UFW_UNIVERSAL_DIR}/${UFW_FMWK_DIRNAME}/Resources\"\nif [ \"$?\" != \"0\" ]; then echo >&2 \"Error: cd failed\"; exit 1; fi\n\nUFW_RESOURCE_LIST=$(ls)\n\ncd \"${UFW_UNIVERSAL_DIR}/${UFW_EMBEDDED_DIRNAME}/Resources\"\nif [ \"$?\" != \"0\" ]; then echo >&2 \"Error: cd failed\"; exit 1; fi\n\nwhile read -r filename; do\n    if [ \"${filename}\" != \"Info.plist\" ]; then\n        ln -s \"../${UFW_FMWK_DIRNAME}/Resources/${filename}\"\n        if [ \"$?\" != \"0\" ]; then echo >&2 \"Error: link failed\"; exit 1; fi\n    fi\ndone <<< \"${UFW_RESOURCE_LIST}\"\n\t\t\t\t\t";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A7CFC66513C1DB0C006C0DF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7CFC69413C1DB72006C0DF4 /* DTXMLDocument.m in Sources */,
+				A7CFC69613C1DB72006C0DF4 /* DTXMLElement.m in Sources */,
+				A7CFC69913C1DB72006C0DF4 /* MobFoxAdBrowserViewController.m in Sources */,
+				A7CFC69B13C1DB72006C0DF4 /* MobFoxBannerView.m in Sources */,
+				A7CFC69D13C1DB72006C0DF4 /* NSData+Base64.m in Sources */,
+				A7CFC69F13C1DB72006C0DF4 /* NSString+MobFox.m in Sources */,
+				A7CFC6A113C1DB72006C0DF4 /* NSURL+MobFox.m in Sources */,
+				A7CFC6A313C1DB72006C0DF4 /* RedirectChecker.m in Sources */,
+				A7CFC6A513C1DB72006C0DF4 /* UIView+FindViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A7CFC67213C1DB0C006C0DF4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7CFC67313C1DB0C006C0DF4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A7CFC67613C1DB0C006C0DF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A7CFC67713C1DB0C006C0DF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A7CFC67913C1DB0C006C0DF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEAD_CODE_STRIPPING = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MobFox/MobFox-Prefix.pch";
+				INFOPLIST_FILE = "MobFox/MobFox-Info.plist";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				MACH_O_TYPE = mh_object;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		A7CFC67A13C1DB0C006C0DF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEAD_CODE_STRIPPING = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MobFox/MobFox-Prefix.pch";
+				INFOPLIST_FILE = "MobFox/MobFox-Info.plist";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				MACH_O_TYPE = mh_object;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		A7CFC67C13C1DB0C006C0DF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = UniversalFramework;
+			};
+			name = Debug;
+		};
+		A7CFC67D13C1DB0C006C0DF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = UniversalFramework;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A7CFC66313C1DB0C006C0DF4 /* Build configuration list for PBXProject "MobFox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7CFC67613C1DB0C006C0DF4 /* Debug */,
+				A7CFC67713C1DB0C006C0DF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7CFC67813C1DB0C006C0DF4 /* Build configuration list for PBXNativeTarget "MobFox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7CFC67913C1DB0C006C0DF4 /* Debug */,
+				A7CFC67A13C1DB0C006C0DF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A7CFC67B13C1DB0C006C0DF4 /* Build configuration list for PBXAggregateTarget "Universal_Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7CFC67C13C1DB0C006C0DF4 /* Debug */,
+				A7CFC67D13C1DB0C006C0DF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A7CFC66013C1DB0C006C0DF4 /* Project object */;
+}
