@@ -32,9 +32,10 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 - (void)setup
 {
 	self.autoresizingMask = UIViewAutoresizingNone;
+	self.backgroundColor = [UIColor clearColor];
 	
 	refreshAnimation = UIViewAnimationTransitionFlipFromLeft;
-
+	
 	// need notification to activate/deactivate timer
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appDidBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appWillResignActive:) name:UIApplicationWillResignActiveNotification object:nil];
@@ -45,7 +46,6 @@ NSString * const MobFoxErrorDomain = @"MobFox";
     if ((self = [super initWithFrame:frame])) 
 	{
 		[self setup];
-		self.backgroundColor = [UIColor clearColor];
     }
     return self;
 }
@@ -76,8 +76,6 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 	return [NSString stringWithFormat:@"%@/%@ (%@)", agent, SDK_VERSION, device];
 }
 
-
-
 - (UIImage*)darkeningImageOfSize:(CGSize)size
 {
 	UIGraphicsBeginImageContext(size);
@@ -95,7 +93,32 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 	return cropped;
 }
 
+- (NSURL *)serverURL
+{
+	return [NSURL URLWithString:@"http://my.mobfox.com/request.php"];
+}
+
 #pragma mark Properties
+- (void)setBounds:(CGRect)bounds
+{
+	[super setBounds:bounds];
+	
+	for (UIView *oneView in self.subviews)
+	{
+		oneView.center = CGPointMake(roundf(self.bounds.size.width / 2.0), roundf(self.bounds.size.height / 2.0));
+	}
+}
+
+- (void)setTransform:(CGAffineTransform)transform
+{
+	[super setTransform:transform];
+	
+	for (UIView *oneView in self.subviews)
+	{
+		oneView.center = CGPointMake(roundf(self.bounds.size.width / 2.0), roundf(self.bounds.size.height / 2.0));
+	}
+}
+
 - (void)setDelegate:(id <MobFoxBannerViewDelegate>)newDelegate
 {
 	if (newDelegate != delegate)
@@ -207,8 +230,6 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 	}
 	
 	
-	//NSLog(@"%@", xml);
-	
 	// previous views will be removed if setup works
 	NSArray *previousSubviews = [NSArray arrayWithArray:self.subviews];
 	
@@ -228,7 +249,7 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 	{
 		_tapThroughURL = [[NSURL URLWithString:clickUrlString] retain];
 	}
-
+	
 	_shouldScaleWebView = [[xml.documentRoot getNamedChild:@"scale"].text isEqualToString:@"yes"];
 	
 	_shouldSkipLinkPreflight = [[xml.documentRoot getNamedChild:@"skippreflight"].text isEqualToString:@"yes"];
@@ -257,7 +278,7 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 		
 		[button setImage:_bannerImage forState:UIControlStateNormal];
 		button.center = CGPointMake(roundf(self.bounds.size.width / 2.0), roundf(self.bounds.size.height / 2.0));
-		button.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
+		//		button.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
 		
 		newAdView = button;
 	}
@@ -266,28 +287,31 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 		NSString *html = [xml.documentRoot getNamedChild:@"htmlString"].text;
 		
 		CGSize bannerSize = CGSizeMake(320, 50);
+		if (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad)
+		{
+			bannerSize = CGSizeMake(728, 90);
+		}
 		
-		UIWebView *webView=[[[UIWebView alloc]initWithFrame:CGRectMake(0, 0, 320, 50)] autorelease];
+		UIWebView *webView=[[[UIWebView alloc]initWithFrame:CGRectMake(0, 0, bannerSize.width, bannerSize.height)] autorelease];
 		webView.delegate = (id)self;
-		webView.userInteractionEnabled = YES;
+		webView.userInteractionEnabled = NO;
 		
 		[webView loadHTMLString:html baseURL:nil];
-
+		
 		
 		// add an invisible button for the whole area
-		
 		UIImage *grayingImage = [self darkeningImageOfSize:bannerSize];
 		
 		UIButton *button=[UIButton buttonWithType:UIButtonTypeCustom];
-		[button setFrame:CGRectMake(0, 0, 320, 50)];
+		[button setFrame:webView.bounds];
 		[button addTarget:self action:@selector(tapThrough:) forControlEvents:UIControlEventTouchUpInside];
 		[button setImage:grayingImage forState:UIControlStateHighlighted];
 		button.alpha = 0.47;
-
-		button.center = CGPointMake(roundf(self.bounds.size.width / 2.0), roundf(self.bounds.size.height / 2.0));
-		button.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
 		
-		[webView addSubview:button];
+		button.center = CGPointMake(roundf(self.bounds.size.width / 2.0), roundf(self.bounds.size.height / 2.0));
+		//		button.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
+		
+		[self addSubview:button];
 		
 		newAdView = webView;
 	} 
@@ -331,9 +355,9 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 			[UIView setAnimationTransition:refreshAnimation forView:self cache:NO];
 		}
 		
-		[self addSubview:newAdView];
+		[self insertSubview:newAdView atIndex:0]; // goes below button
 		[previousSubviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-
+		
 		if ([previousSubviews count])
 		{
 			[UIView commitAnimations];
@@ -363,7 +387,7 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 	{
 		requestType = @"ipad_app";
 	}
-
+	
 	NSString *userAgent=[self userAgent];
 	NSString *m=@"live";
 	NSString *osVersion = [UIDevice currentDevice].systemVersion;
@@ -380,7 +404,9 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 							 [osVersion stringByUrlEncoding],
 							 [advertisingSection?advertisingSection:@"" stringByUrlEncoding]];
 	
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://my.mobfox.com/request.php?%@",requestString]];
+	NSURL *serverURL = [self serverURL];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@?%@", serverURL, requestString]];
+	//	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.mobfox.com/ipad-test/imagead.php?%@",requestString]];
 	
 	
 	NSMutableURLRequest *request;
@@ -443,7 +469,7 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 	if (!delegate)
 	{
 		[self showErrorLabelWithText:@"MobFoxBannerViewDelegate not set"];
-
+		
 		return;
 	}
 	
@@ -460,7 +486,7 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 	if (![publisherId length])
 	{
 		[self showErrorLabelWithText:@"MobFoxBannerViewDelegate returned invalid publisher ID."];
-
+		
 		return;
 	}
 	
@@ -507,19 +533,17 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 	
 	
 	[browser.webView loadData:data MIMEType:checker.mimeType textEncodingName:checker.textEncodingName baseURL:baseURL];
-	 
+	
 	[self hideStatusBar];
 	[viewController presentModalViewController:browser animated:YES];
-	 
-	 bannerViewActionInProgress = YES;
+	
+	bannerViewActionInProgress = YES;
 }
 
 - (void)checker:(RedirectChecker *)checker didFailWithError:(NSError *)error
 {
-	 bannerViewActionInProgress = NO;
+	bannerViewActionInProgress = NO;
 }
-
-
 
 - (void)tapThrough:(id)sender
 {
@@ -548,7 +572,7 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 	}
 	
 	[self setRefreshTimerActive:NO];
-
+	
 	// probes the URL (= record clickthrough) and acts based on the response
 	
 	if (!_shouldSkipLinkPreflight)
@@ -576,7 +600,7 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 	bannerViewActionInProgress = NO;
 	[self setRefreshTimerActive:YES];
 	
-	if ([delegate respondsToSelector:@selector(mobfoxBannerViewDidLoadMobFoxAd:)])
+	if ([delegate respondsToSelector:@selector(mobfoxBannerViewActionDidFinish:)])
 	{
 		[delegate mobfoxBannerViewActionDidFinish:self];
 	}
@@ -586,20 +610,20 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 
 // obsolete, because there is full size transparent button over it
 /*
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
-{
-	if (navigationType == UIWebViewNavigationTypeLinkClicked)
-	{
-		_tapThroughURL = [[request URL] retain];
-		
-		[self tapThrough:nil];
-		
-		return NO;
-	}
-	
-	return YES;
-}
-*/
+ - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+ {
+ if (navigationType == UIWebViewNavigationTypeLinkClicked)
+ {
+ _tapThroughURL = [[request URL] retain];
+ 
+ [self tapThrough:nil];
+ 
+ return NO;
+ }
+ 
+ return YES;
+ }
+ */
 
 
 #pragma mark Notifications

@@ -62,9 +62,9 @@
 	CGRect mainFrame = [UIScreen mainScreen].applicationFrame;
 	
 	UIView *view = [[[UIView alloc] initWithFrame:mainFrame] autorelease];
-
+	
 	view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-
+	
 	self.webView.frame = view.bounds;
 	[view addSubview:self.webView];
 	
@@ -75,7 +75,7 @@
 	UIButton *btnClose=[UIButton buttonWithType:UIButtonTypeCustom];
 	[btnClose setImage:image forState:UIControlStateNormal];
 	[btnClose addTarget:self action:@selector(dismiss:) forControlEvents:UIControlEventTouchUpInside];
-	[btnClose setFrame:CGRectMake(288, 3, 32, 32)];
+	[btnClose setFrame:CGRectMake(view.bounds.size.width - 32, 3, 32, 32)];
 	btnClose.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin;
 	[view addSubview:btnClose];
 	
