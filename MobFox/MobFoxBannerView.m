@@ -406,8 +406,6 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 	
 	NSURL *serverURL = [self serverURL];
 	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@?%@", serverURL, requestString]];
-	//	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.mobfox.com/ipad-test/imagead.php?%@",requestString]];
-	
 	
 	NSMutableURLRequest *request;
 	NSError *error;
