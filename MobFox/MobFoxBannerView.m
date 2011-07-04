@@ -354,7 +354,16 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 {
 	NSAutoreleasePool *pool=[[NSAutoreleasePool alloc]init];
 	
-	NSString *requestType=@"iphone_app";
+	NSString *requestType;
+	if (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPhone)
+	{
+		requestType = @"iphone_app";
+	}
+	else
+	{
+		requestType = @"ipad_app";
+	}
+
 	NSString *userAgent=[self userAgent];
 	NSString *m=@"live";
 	NSString *osVersion = [UIDevice currentDevice].systemVersion;
