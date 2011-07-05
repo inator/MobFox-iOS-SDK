@@ -295,7 +295,6 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 		UIWebView *webView=[[[UIWebView alloc]initWithFrame:CGRectMake(0, 0, bannerSize.width, bannerSize.height)] autorelease];
 		webView.delegate = (id)self;
 		webView.userInteractionEnabled = NO;
-		webView.backgroundColor = [UIColor clearColor];
 		
 		[webView loadHTMLString:html baseURL:nil];
 		
@@ -313,6 +312,10 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 		//		button.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
 		
 		[self addSubview:button];
+
+		// we want the webview to be translucent so that we see the developer's custom background
+		webView.backgroundColor = [UIColor clearColor];
+		webView.opaque = NO;
 		
 		newAdView = webView;
 	} 
