@@ -466,6 +466,7 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 	label.text = text;
 	
 	[self addSubview:label];
+    [label release];
 }
 
 - (void)requestAd
