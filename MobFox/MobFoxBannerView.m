@@ -441,6 +441,7 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 	if ([bannerUrlString length])
 	{
 		NSURL *bannerUrl = [NSURL URLWithString:bannerUrlString];
+        [_bannerImage release];
 		_bannerImage = [[UIImage alloc]initWithData:[NSData dataWithContentsOfURL:bannerUrl]];
 	}
 	
