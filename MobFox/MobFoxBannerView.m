@@ -247,6 +247,7 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 	NSString *clickUrlString = [xml.documentRoot getNamedChild:@"clickurl"].text;
 	if ([clickUrlString length])
 	{
+        [_tapThroughURL release];
 		_tapThroughURL = [[NSURL URLWithString:clickUrlString] retain];
 	}
 	
