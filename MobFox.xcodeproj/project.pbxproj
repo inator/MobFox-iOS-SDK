@@ -339,6 +339,7 @@
 				GCC_PREFIX_HEADER = "MobFox/MobFox-Prefix.pch";
 				INFOPLIST_FILE = "MobFox/MobFox-Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				LINK_WITH_STANDARD_LIBRARIES = NO;
 				MACH_O_TYPE = mh_object;
 				OTHER_LDFLAGS = "-ObjC";
@@ -360,6 +361,7 @@
 				GCC_PREFIX_HEADER = "MobFox/MobFox-Prefix.pch";
 				INFOPLIST_FILE = "MobFox/MobFox-Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				LINK_WITH_STANDARD_LIBRARIES = NO;
 				MACH_O_TYPE = mh_object;
 				OTHER_LDFLAGS = "-ObjC";
@@ -372,6 +374,7 @@
 		A7CFC67C13C1DB0C006C0DF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				PRODUCT_NAME = UniversalFramework;
 			};
 			name = Debug;
@@ -379,6 +382,7 @@
 		A7CFC67D13C1DB0C006C0DF4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				PRODUCT_NAME = UniversalFramework;
 			};
 			name = Release;
@@ -402,6 +406,7 @@
 				A7CFC67A13C1DB0C006C0DF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A7CFC67B13C1DB0C006C0DF4 /* Build configuration list for PBXAggregateTarget "Universal_Framework" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +415,7 @@
 				A7CFC67D13C1DB0C006C0DF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
