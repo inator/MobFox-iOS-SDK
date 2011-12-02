@@ -7,6 +7,7 @@ Usage
 -----
 
 To add this SDK to your app you can:
+
 - build the universal Framework target
 - add this project as a sub-project and link to the "Static Libary" target
 
