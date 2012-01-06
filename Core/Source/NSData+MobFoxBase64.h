@@ -1,5 +1,5 @@
 //
-//  NSData+Base64.h
+//  NSData+MobFoxBase64.h
 //  base64
 //
 //  Created by Matt Gallagher on 2009/06/03.
@@ -14,21 +14,21 @@
 
 #import <Foundation/Foundation.h>
 
-void *NewBase64Decode(
+void *MobFoxBase64Decode(
 	const char *inputBuffer,
 	size_t length,
 	size_t *outputLength);
 
-char *NewBase64Encode(
+char *MobFoxBase64Encode(
 	const void *inputBuffer,
 	size_t length,
 	bool separateLines,
 	size_t *outputLength);
 
-@interface NSData (Base64)
+@interface NSData (MobFoxBase64)
 
-+ (NSData *)dataFromBase64String:(NSString *)aString;
-- (NSString *)base64EncodedString;
++ (NSData *)MFdataFromBase64String:(NSString *)aString;
+- (NSString *)MFbase64EncodedString;
 
 @end
 

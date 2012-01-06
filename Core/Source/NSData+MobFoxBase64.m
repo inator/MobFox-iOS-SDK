@@ -1,5 +1,5 @@
 //
-//  NSData+Base64.m
+//  NSData+MobFoxBase64.m
 //  base64
 //
 //  Created by Matt Gallagher on 2009/06/03.
@@ -55,7 +55,7 @@ static unsigned char base64DecodeLookup[256] =
 #define BASE64_UNIT_SIZE 4
 
 //
-// NewBase64Decode
+// MobFoxBase64Decode
 //
 // Decodes the base64 ASCII string in the inputBuffer to a newly malloced
 // output buffer.
@@ -67,7 +67,7 @@ static unsigned char base64DecodeLookup[256] =
 // returns the decoded buffer. Must be free'd by caller. Length is given by
 //	outputLength.
 //
-void *NewBase64Decode(
+void *MobFoxBase64Decode(
 	const char *inputBuffer,
 	size_t length,
 	size_t *outputLength)
@@ -122,7 +122,7 @@ void *NewBase64Decode(
 }
 
 //
-// NewBase64Decode
+// MobFoxBase64Decode
 //
 // Encodes the arbitrary data in the inputBuffer as base64 into a newly malloced
 // output buffer.
@@ -137,7 +137,7 @@ void *NewBase64Decode(
 // returns the encoded buffer. Must be free'd by caller. Length is given by
 //	outputLength.
 //
-char *NewBase64Encode(
+char *MobFoxBase64Encode(
 	const void *buffer,
 	size_t length,
 	bool separateLines,
@@ -263,11 +263,11 @@ char *NewBase64Encode(
 //
 // returns the autoreleased NSData representation of the base64 string
 //
-+ (NSData *)dataFromBase64String:(NSString *)aString
++ (NSData *)MFdataFromBase64String:(NSString *)aString
 {
 	NSData *data = [aString dataUsingEncoding:NSASCIIStringEncoding];
 	size_t outputLength;
-	void *outputBuffer = NewBase64Decode([data bytes], [data length], &outputLength);
+	void *outputBuffer = MobFoxBase64Decode([data bytes], [data length], &outputLength);
 	NSData *result = [NSData dataWithBytes:outputBuffer length:outputLength];
 	free(outputBuffer);
 	return result;
@@ -282,11 +282,11 @@ char *NewBase64Encode(
 // returns an autoreleased NSString being the base 64 representation of the
 //	receiver.
 //
-- (NSString *)base64EncodedString
+- (NSString *)MFbase64EncodedString
 {
 	size_t outputLength;
 	char *outputBuffer =
-		NewBase64Encode([self bytes], [self length], true, &outputLength);
+		MobFoxBase64Encode([self bytes], [self length], true, &outputLength);
 	
 	NSString *result =
 		[[[NSString alloc]

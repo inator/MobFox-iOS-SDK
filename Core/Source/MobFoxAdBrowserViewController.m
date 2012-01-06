@@ -72,7 +72,7 @@
 	
 	
 	NSString *buttonBase64encoded = CLOSE_BUTTON_DATA;
-	UIImage *image = [UIImage imageWithData:[NSData dataFromBase64String:buttonBase64encoded]];
+	UIImage *image = [UIImage imageWithData:[NSData MFdataFromBase64String:buttonBase64encoded]];
 	
 	UIButton *btnClose=[UIButton buttonWithType:UIButtonTypeCustom];
 	[btnClose setImage:image forState:UIControlStateNormal];
