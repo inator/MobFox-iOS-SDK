@@ -42,9 +42,9 @@
 		A7992ED31489373000E86AC8 /* DTXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = A7992E791489362800E86AC8 /* DTXMLElement.m */; };
 		A7992ED41489373000E86AC8 /* MobFoxAdBrowserViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A7992E7A1489362800E86AC8 /* MobFoxAdBrowserViewController.h */; };
 		A7992ED51489373000E86AC8 /* MobFoxAdBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7992E7B1489362800E86AC8 /* MobFoxAdBrowserViewController.m */; };
-		A7992ED61489373000E86AC8 /* MobFoxBannerView.h in Headers */ = {isa = PBXBuildFile; fileRef = A7992E7C1489362800E86AC8 /* MobFoxBannerView.h */; };
+		A7992ED61489373000E86AC8 /* MobFoxBannerView.h in Headers */ = {isa = PBXBuildFile; fileRef = A7992E7C1489362800E86AC8 /* MobFoxBannerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A7992ED71489373000E86AC8 /* MobFoxBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7992E7D1489362800E86AC8 /* MobFoxBannerView.m */; };
-		A7CDEF53148E76F100DD6D84 /* MobFox.h in Headers */ = {isa = PBXBuildFile; fileRef = A7992E741489362800E86AC8 /* MobFox.h */; };
+		A7CDEF53148E76F100DD6D84 /* MobFox.h in Headers */ = {isa = PBXBuildFile; fileRef = A7992E741489362800E86AC8 /* MobFox.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A7CDEF55148E76F200DD6D84 /* MobFox.h in Headers */ = {isa = PBXBuildFile; fileRef = A7992E741489362800E86AC8 /* MobFox.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -365,7 +365,6 @@
 				GCC_PREFIX_HEADER = "Core/MobFox-Prefix.pch";
 				INFOPLIST_FILE = "Core/MobFox-Info.plist";
 				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				LINK_WITH_STANDARD_LIBRARIES = NO;
 				MACH_O_TYPE = mh_object;
 				PRODUCT_NAME = MobFox;
@@ -388,7 +387,6 @@
 				GCC_PREFIX_HEADER = "Core/MobFox-Prefix.pch";
 				INFOPLIST_FILE = "Core/MobFox-Info.plist";
 				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				LINK_WITH_STANDARD_LIBRARIES = NO;
 				MACH_O_TYPE = mh_object;
 				PRODUCT_NAME = MobFox;
@@ -401,12 +399,12 @@
 		A7992EC4148936E400E86AC8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DSTROOT = /tmp/DTMobFox.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Core/MobFox-Prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = MobFox;
+				PUBLIC_HEADERS_FOLDER_PATH = MobFox;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -414,12 +412,12 @@
 		A7992EC5148936E400E86AC8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DSTROOT = /tmp/DTMobFox.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Core/MobFox-Prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = MobFox;
+				PUBLIC_HEADERS_FOLDER_PATH = MobFox;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
