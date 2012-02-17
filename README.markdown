@@ -12,3 +12,5 @@ To add this SDK to your app you can:
 - add this project as a sub-project and link to the "Static Libary" target
 
 Don't forget the -ObjC in your app target's "Other Linker Flags".
+
+Note that this project has been migrated to ARC.
