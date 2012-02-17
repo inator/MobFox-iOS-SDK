@@ -32,7 +32,7 @@
 	
 	DTXMLElement *documentRoot;
 	
-	id <DTXMLDocumentDelegate> _delegate;
+	__unsafe_unretained id <DTXMLDocumentDelegate> _delegate;
 	
 	// parsing 
 	DTXMLElement *currentElement;
@@ -46,7 +46,7 @@
 
 @property (nonatomic, retain) NSURL *url;
 @property (nonatomic, retain) DTXMLElement *documentRoot;
-@property (nonatomic, assign) id <DTXMLDocumentDelegate> delegate;
+@property (nonatomic, assign) __unsafe_unretained id <DTXMLDocumentDelegate> delegate;
 @property (nonatomic, readonly) BOOL doneLoading;
 
 + (DTXMLDocument *) documentWithData:(NSData *)data;

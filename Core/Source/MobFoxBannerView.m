@@ -28,6 +28,9 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 
 
 @implementation MobFoxBannerView
+{
+	RedirectChecker *redirectChecker;
+}
 
 - (void)setup
 {
@@ -61,10 +64,6 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 	delegate = nil;
 	
 	[_refreshTimer invalidate], _refreshTimer = nil;
-	[_bannerImage release];
-	[_tapThroughURL release];
-	[advertisingSection release];
-    [super dealloc];
 }
 
 #pragma mark Utilities
@@ -248,8 +247,7 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 	NSString *clickUrlString = [xml.documentRoot getNamedChild:@"clickurl"].text;
 	if ([clickUrlString length])
 	{
-        [_tapThroughURL release];
-		_tapThroughURL = [[NSURL URLWithString:clickUrlString] retain];
+		_tapThroughURL = [NSURL URLWithString:clickUrlString];
 	}
 	
 	_shouldScaleWebView = [[xml.documentRoot getNamedChild:@"scale"].text isEqualToString:@"yes"];
@@ -294,7 +292,7 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 			bannerSize = CGSizeMake(728, 90);
 		}
 		
-		UIWebView *webView=[[[UIWebView alloc]initWithFrame:CGRectMake(0, 0, bannerSize.width, bannerSize.height)] autorelease];
+		UIWebView *webView=[[UIWebView alloc]initWithFrame:CGRectMake(0, 0, bannerSize.width, bannerSize.height)];
 		webView.delegate = (id)self;
 		webView.userInteractionEnabled = NO;
 		
@@ -382,8 +380,8 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 
 - (void)asyncRequestAdWithPublisherId:(NSString *)publisherId
 {
-	NSAutoreleasePool *pool=[[NSAutoreleasePool alloc]init];
-	
+	@autoreleasepool 
+	{
 	NSString *requestType;
 	if (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPhone)
 	{
@@ -442,7 +440,6 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 	if ([bannerUrlString length])
 	{
 		NSURL *bannerUrl = [NSURL URLWithString:bannerUrlString];
-        [_bannerImage release];
 		_bannerImage = [[UIImage alloc]initWithData:[NSData dataWithContentsOfURL:bannerUrl]];
 	}
 	
@@ -450,7 +447,8 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 	
 	[self performSelectorOnMainThread:@selector(setupAdFromXml:) withObject:xml waitUntilDone:YES];
 	
-	[pool release];
+	}
+
 }
 
 - (void)showErrorLabelWithText:(NSString *)text
@@ -467,7 +465,6 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 	label.text = text;
 	
 	[self addSubview:label];
-    [label release];
 }
 
 - (void)requestAd
@@ -511,7 +508,7 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 	
 	UIViewController *viewController = [self firstAvailableUIViewController];
 	
-	MobFoxAdBrowserViewController *browser = [[[MobFoxAdBrowserViewController alloc] initWithUrl:redirectURL] autorelease];
+	MobFoxAdBrowserViewController *browser = [[MobFoxAdBrowserViewController alloc] initWithUrl:redirectURL];
 	browser.delegate = (id)self;
 	browser.userAgent = [self userAgent];
 	browser.webView.scalesPageToFit = _shouldScaleWebView;
@@ -526,7 +523,7 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 {
 	UIViewController *viewController = [self firstAvailableUIViewController];
 	
-	MobFoxAdBrowserViewController *browser = [[[MobFoxAdBrowserViewController alloc] initWithUrl:nil] autorelease];
+	MobFoxAdBrowserViewController *browser = [[MobFoxAdBrowserViewController alloc] initWithUrl:nil];
 	browser.delegate = (id)self;
 	browser.userAgent = [self userAgent];
 	browser.webView.scalesPageToFit = _shouldScaleWebView;
@@ -583,11 +580,11 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 	
 	if (!_shouldSkipLinkPreflight)
 	{
-		[[[RedirectChecker alloc] initWithURL:_tapThroughURL userAgent:[self userAgent] delegate:(id)self] autorelease];
+		redirectChecker = [[RedirectChecker alloc] initWithURL:_tapThroughURL userAgent:[self userAgent] delegate:(id)self];
 		return;
 	}
 	
-	MobFoxAdBrowserViewController *browser = [[[MobFoxAdBrowserViewController alloc] initWithUrl:_tapThroughURL] autorelease];
+	MobFoxAdBrowserViewController *browser = [[MobFoxAdBrowserViewController alloc] initWithUrl:_tapThroughURL];
 	browser.delegate = (id)self;
 	browser.userAgent = [self userAgent];
 	browser.webView.scalesPageToFit = _shouldScaleWebView;

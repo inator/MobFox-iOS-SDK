@@ -28,22 +28,12 @@
 		
 		receivedData = [[NSMutableData alloc] init];
 		[_connection start];
-		[self retain];
 	}
 	
 	return self;
 }
 
 
-
-- (void)dealloc 
-{
-	[_connection release];
-	[receivedData release];
-	[mimeType release];
-	[textEncodingName release];
-    [super dealloc];
-}
 
 - (NSURLRequest *)connection:(NSURLConnection *)connection willSendRequest:(NSURLRequest *)request redirectResponse:(NSURLResponse *)redirectResponse
 {
@@ -52,8 +42,6 @@
 		[_delegate checker:self detectedRedirectionTo:[request URL]];
 		
 		[_connection cancel];
-
-		[self release];
 
 		return nil;
 	}
@@ -75,8 +63,6 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
 	[_delegate checker:self didFinishWithData:receivedData];
-	[self release];
-	
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error;
@@ -85,8 +71,6 @@
 	{
 		[_delegate checker:self didFailWithError:error];
 	}
-	
-	[self release];
 }
 
 @end

@@ -48,14 +48,6 @@
 - (void)dealloc 
 {
 	delegate = nil;
-	
-	[_url release];
-	[_webView release];
-	[mimeType release];
-	[textEncodingName release];
-	[receivedData release];
-	[userAgent release];
-    [super dealloc];
 }
 
 
@@ -64,7 +56,7 @@
 {
 	CGRect mainFrame = [UIScreen mainScreen].applicationFrame;
 	
-	UIView *view = [[[UIView alloc] initWithFrame:mainFrame] autorelease];
+	UIView *view = [[UIView alloc] initWithFrame:mainFrame];
 	
 	view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	
@@ -258,7 +250,6 @@
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
-	[receivedData release];
 	receivedData = nil;
 	
 	[self webView:_webView didFailLoadWithError:error];

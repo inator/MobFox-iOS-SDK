@@ -45,7 +45,7 @@ enum {
 	BOOL bannerViewActionInProgress;
 	UIViewAnimationTransition refreshAnimation;
 	
-	id <MobFoxBannerViewDelegate> delegate;
+	__unsafe_unretained id <MobFoxBannerViewDelegate> delegate;
 	
 	// internals
 	UIImage *_bannerImage;
@@ -59,7 +59,7 @@ enum {
 	NSTimer *_refreshTimer;
 }
 
-@property(nonatomic, assign) IBOutlet id <MobFoxBannerViewDelegate> delegate;
+@property(nonatomic, assign) IBOutlet __unsafe_unretained id <MobFoxBannerViewDelegate> delegate;
 @property(nonatomic, copy) NSString *advertisingSection;
 @property(nonatomic, assign) UIViewAnimationTransition refreshAnimation;
 

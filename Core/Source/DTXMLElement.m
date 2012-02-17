@@ -24,17 +24,6 @@
 	return self;
 }
 
-- (void) dealloc
-{
-	[name release];
-	[text release];
-	[children release];
-	[attributes release];
-	
-	[super dealloc];
-}
-
-
 // as XML
 - (NSString *)description
 {
@@ -106,7 +95,7 @@
 
 - (DTXMLElement *) addChildWithName:(NSString *)childName text:(NSString *)childText
 {
-	DTXMLElement *newChild = [[[DTXMLElement alloc] initWithName:childName] autorelease];
+	DTXMLElement *newChild = [[DTXMLElement alloc] initWithName:childName];
 	if (childText)
 	{
 		newChild.text = [NSString stringWithString:childText];

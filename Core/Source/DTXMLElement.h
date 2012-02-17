@@ -14,14 +14,14 @@
 	NSMutableString *text;
 	NSMutableArray *children;
 	NSMutableDictionary *attributes;
-	DTXMLElement *parent;
+	__unsafe_unretained DTXMLElement *parent;
 }
 
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSMutableString *text;
 @property (nonatomic, retain) NSMutableArray *children;
 @property (nonatomic, retain) NSMutableDictionary *attributes;
-@property (nonatomic, assign) DTXMLElement *parent;
+@property (nonatomic, assign) __unsafe_unretained DTXMLElement *parent;
 
 
 - (id) initWithName:(NSString *)elementName;

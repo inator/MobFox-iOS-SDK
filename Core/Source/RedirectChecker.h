@@ -25,7 +25,7 @@
 
 @interface RedirectChecker : NSObject 
 {
-	id <RedirectCheckerDelegate> _delegate;
+	__unsafe_unretained id <RedirectCheckerDelegate> _delegate;
 	
 	NSMutableData *receivedData;
 	
@@ -37,7 +37,7 @@
 
 - (id)initWithURL:(NSURL *)url userAgent:(NSString *)userAgent delegate:(id<RedirectCheckerDelegate>) delegate;
 
-@property (nonatomic, assign) id <RedirectCheckerDelegate> delegate;
+@property (nonatomic, assign) __unsafe_unretained id <RedirectCheckerDelegate> delegate;
 
 @property (nonatomic, retain) NSString *mimeType;
 @property (nonatomic, retain) NSString *textEncodingName;

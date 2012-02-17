@@ -28,7 +28,7 @@
 	NSString *textEncodingName;
 	NSMutableData *receivedData;
 	
-	id <MobFoxAdBrowserViewController> delegate;
+	__unsafe_unretained id <MobFoxAdBrowserViewController> delegate;
 }
 
 @property (nonatomic, retain) NSString *userAgent;
@@ -36,7 +36,7 @@
 
 @property (nonatomic, retain) UIWebView *webView;
 
-@property (nonatomic, assign) id <MobFoxAdBrowserViewController> delegate;
+@property (nonatomic, assign) __unsafe_unretained id <MobFoxAdBrowserViewController> delegate;
 
 - (id)initWithUrl:(NSURL *)url;
 //- (id)initWithHTML:(NSString *)html baseURL:(NSURL *)url

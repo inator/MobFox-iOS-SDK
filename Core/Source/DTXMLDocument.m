@@ -15,22 +15,22 @@
 #pragma mark Factory Methods
 + (DTXMLDocument *) documentWithData:(NSData *)data
 {
-	return [[[DTXMLDocument alloc] initWithData:data] autorelease];
+	return [[DTXMLDocument alloc] initWithData:data];
 }
 
 + (DTXMLDocument *) documentWithContentsOfFile:(NSString *)path
 {
-	return [[[DTXMLDocument alloc] initWithContentsOfFile:path] autorelease];
+	return [[DTXMLDocument alloc] initWithContentsOfFile:path];
 }
 
 + (DTXMLDocument *) documentWithContentsOfFile:(NSString *)path delegate:(id<DTXMLDocumentDelegate>)delegate
 {
-	return [[[DTXMLDocument alloc] initWithContentsOfFile:path delegate:delegate] autorelease];
+	return [[DTXMLDocument alloc] initWithContentsOfFile:path delegate:delegate];
 }
 
 + (DTXMLDocument *) documentWithContentsOfURL:(NSURL *)url delegate:(id<DTXMLDocumentDelegate>)delegate
 {
-	return [[[DTXMLDocument alloc] initWithContentsOfURL:url delegate:delegate] autorelease];
+	return [[DTXMLDocument alloc] initWithContentsOfURL:url delegate:delegate];
 }
 
 
@@ -51,7 +51,7 @@
 	if (self = [super init])
 	{
 		// create parser
-		NSXMLParser *parser = [[[NSXMLParser alloc] initWithData:data] autorelease];	
+		NSXMLParser *parser = [[NSXMLParser alloc] initWithData:data];	
 		[parser setShouldProcessNamespaces: YES];
 		[parser setShouldReportNamespacePrefixes:YES];
 		[parser setShouldResolveExternalEntities:NO];
@@ -66,7 +66,6 @@
 		}
 		else 
 		{
-			[self release];
 			return nil;
 		}
 	}
@@ -84,7 +83,7 @@
 		NSURL *fileURL = [NSURL fileURLWithPath:path]; 
 		
 		// create parser
-		NSXMLParser *parser = [[[NSXMLParser alloc] initWithContentsOfURL:fileURL] autorelease];	
+		NSXMLParser *parser = [[NSXMLParser alloc] initWithContentsOfURL:fileURL];	
 		[parser setShouldProcessNamespaces: YES];
 		[parser setShouldReportNamespacePrefixes:YES];
 		[parser setShouldResolveExternalEntities:NO];
@@ -112,7 +111,7 @@
 		NSURL *fileURL = [NSURL fileURLWithPath:path]; 
 		
 		// create parser
-		NSXMLParser *parser = [[[NSXMLParser alloc] initWithContentsOfURL:fileURL] autorelease];	
+		NSXMLParser *parser = [[NSXMLParser alloc] initWithContentsOfURL:fileURL];	
 		[parser setShouldProcessNamespaces: YES];
 		[parser setShouldReportNamespacePrefixes:YES];
 		[parser setShouldResolveExternalEntities:NO];
@@ -144,26 +143,12 @@
 		
 		if (theConnection) 
 		{
-			receivedData=[[NSMutableData data] retain];
+			receivedData=[NSMutableData data];
 		}
 	}
 	
 	return self;
 }
-
-
-- (void) dealloc
-{
-	[_url release];
-
-	[theConnection release];
-	[documentRoot release];
-	
-	[receivedData release];
-	
-	[super dealloc];
-}
-
 
 
 #pragma mark Parser Protocol
@@ -186,7 +171,6 @@
 	}
 		
 	currentElement = newElement;
-	[newElement release];  // still retained as documentRoot or a child
 }
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
@@ -234,7 +218,6 @@
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
-	[receivedData release];
 	receivedData = nil;
 	
 	
@@ -248,8 +231,7 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-	NSXMLParser *parser = [[[NSXMLParser alloc] initWithData:receivedData] autorelease];	
-	[receivedData release];	
+	NSXMLParser *parser = [[NSXMLParser alloc] initWithData:receivedData];	
 	receivedData = nil;
 	
 	[parser setShouldProcessNamespaces: YES];
