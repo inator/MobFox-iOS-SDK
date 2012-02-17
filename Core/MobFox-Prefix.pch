@@ -6,4 +6,4 @@
 	#import <Foundation/Foundation.h>
 #endif
 
-#define SDK_VERSION @"3.0.4"
+#define SDK_VERSION @"3.0.5"
