@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7785AD514EEA7F900F4BCA3 /* UIImage+MobFox.h in Headers */ = {isa = PBXBuildFile; fileRef = A7785AD314EEA7F900F4BCA3 /* UIImage+MobFox.h */; };
+		A7785AD614EEA7F900F4BCA3 /* UIImage+MobFox.h in Headers */ = {isa = PBXBuildFile; fileRef = A7785AD314EEA7F900F4BCA3 /* UIImage+MobFox.h */; };
+		A7785AD714EEA7F900F4BCA3 /* UIImage+MobFox.m in Sources */ = {isa = PBXBuildFile; fileRef = A7785AD414EEA7F900F4BCA3 /* UIImage+MobFox.m */; };
+		A7785AD814EEA7F900F4BCA3 /* UIImage+MobFox.m in Sources */ = {isa = PBXBuildFile; fileRef = A7785AD414EEA7F900F4BCA3 /* UIImage+MobFox.m */; };
 		A7992E8F1489362800E86AC8 /* DTXMLDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = A7992E761489362800E86AC8 /* DTXMLDocument.h */; };
 		A7992E911489362800E86AC8 /* DTXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = A7992E771489362800E86AC8 /* DTXMLDocument.m */; };
 		A7992E931489362800E86AC8 /* DTXMLElement.h in Headers */ = {isa = PBXBuildFile; fileRef = A7992E781489362800E86AC8 /* DTXMLElement.h */; };
@@ -15,8 +19,6 @@
 		A7992E991489362800E86AC8 /* MobFoxAdBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7992E7B1489362800E86AC8 /* MobFoxAdBrowserViewController.m */; };
 		A7992E9B1489362800E86AC8 /* MobFoxBannerView.h in Headers */ = {isa = PBXBuildFile; fileRef = A7992E7C1489362800E86AC8 /* MobFoxBannerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A7992E9D1489362800E86AC8 /* MobFoxBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7992E7D1489362800E86AC8 /* MobFoxBannerView.m */; };
-		A7992E9F1489362800E86AC8 /* NSData+MobFoxBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = A7992E7E1489362800E86AC8 /* NSData+MobFoxBase64.h */; };
-		A7992EA11489362800E86AC8 /* NSData+MobFoxBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = A7992E7F1489362800E86AC8 /* NSData+MobFoxBase64.m */; };
 		A7992EA31489362800E86AC8 /* NSString+MobFox.h in Headers */ = {isa = PBXBuildFile; fileRef = A7992E801489362800E86AC8 /* NSString+MobFox.h */; };
 		A7992EA51489362800E86AC8 /* NSString+MobFox.m in Sources */ = {isa = PBXBuildFile; fileRef = A7992E811489362800E86AC8 /* NSString+MobFox.m */; };
 		A7992EA71489362800E86AC8 /* NSURL+MobFox.h in Headers */ = {isa = PBXBuildFile; fileRef = A7992E821489362800E86AC8 /* NSURL+MobFox.h */; };
@@ -26,8 +28,6 @@
 		A7992EAF1489362800E86AC8 /* UIView+FindViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A7992E861489362800E86AC8 /* UIView+FindViewController.h */; };
 		A7992EB11489362800E86AC8 /* UIView+FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7992E871489362800E86AC8 /* UIView+FindViewController.m */; };
 		A7992EBC148936E400E86AC8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7992EBB148936E400E86AC8 /* Foundation.framework */; };
-		A7992EC61489373000E86AC8 /* NSData+MobFoxBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = A7992E7E1489362800E86AC8 /* NSData+MobFoxBase64.h */; };
-		A7992EC71489373000E86AC8 /* NSData+MobFoxBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = A7992E7F1489362800E86AC8 /* NSData+MobFoxBase64.m */; };
 		A7992EC81489373000E86AC8 /* NSString+MobFox.h in Headers */ = {isa = PBXBuildFile; fileRef = A7992E801489362800E86AC8 /* NSString+MobFox.h */; };
 		A7992EC91489373000E86AC8 /* NSString+MobFox.m in Sources */ = {isa = PBXBuildFile; fileRef = A7992E811489362800E86AC8 /* NSString+MobFox.m */; };
 		A7992ECA1489373000E86AC8 /* NSURL+MobFox.h in Headers */ = {isa = PBXBuildFile; fileRef = A7992E821489362800E86AC8 /* NSURL+MobFox.h */; };
@@ -50,6 +50,8 @@
 
 /* Begin PBXFileReference section */
 		A746A63914B9DD110019992F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A7785AD314EEA7F900F4BCA3 /* UIImage+MobFox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MobFox.h"; sourceTree = "<group>"; };
+		A7785AD414EEA7F900F4BCA3 /* UIImage+MobFox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MobFox.m"; sourceTree = "<group>"; };
 		A7992E5A1489342100E86AC8 /* MobFox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobFox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7992E721489362800E86AC8 /* MobFox-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MobFox-Info.plist"; sourceTree = "<group>"; };
 		A7992E731489362800E86AC8 /* MobFox-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MobFox-Prefix.pch"; sourceTree = "<group>"; };
@@ -62,8 +64,6 @@
 		A7992E7B1489362800E86AC8 /* MobFoxAdBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobFoxAdBrowserViewController.m; sourceTree = "<group>"; };
 		A7992E7C1489362800E86AC8 /* MobFoxBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobFoxBannerView.h; sourceTree = "<group>"; };
 		A7992E7D1489362800E86AC8 /* MobFoxBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobFoxBannerView.m; sourceTree = "<group>"; };
-		A7992E7E1489362800E86AC8 /* NSData+MobFoxBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MobFoxBase64.h"; sourceTree = "<group>"; };
-		A7992E7F1489362800E86AC8 /* NSData+MobFoxBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MobFoxBase64.m"; sourceTree = "<group>"; };
 		A7992E801489362800E86AC8 /* NSString+MobFox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MobFox.h"; sourceTree = "<group>"; };
 		A7992E811489362800E86AC8 /* NSString+MobFox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MobFox.m"; sourceTree = "<group>"; };
 		A7992E821489362800E86AC8 /* NSURL+MobFox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+MobFox.h"; sourceTree = "<group>"; };
@@ -133,8 +133,6 @@
 		A7992EB41489363E00E86AC8 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				A7992E7E1489362800E86AC8 /* NSData+MobFoxBase64.h */,
-				A7992E7F1489362800E86AC8 /* NSData+MobFoxBase64.m */,
 				A7992E801489362800E86AC8 /* NSString+MobFox.h */,
 				A7992E811489362800E86AC8 /* NSString+MobFox.m */,
 				A7992E821489362800E86AC8 /* NSURL+MobFox.h */,
@@ -143,6 +141,8 @@
 				A7992E851489362800E86AC8 /* RedirectChecker.m */,
 				A7992E861489362800E86AC8 /* UIView+FindViewController.h */,
 				A7992E871489362800E86AC8 /* UIView+FindViewController.m */,
+				A7785AD314EEA7F900F4BCA3 /* UIImage+MobFox.h */,
+				A7785AD414EEA7F900F4BCA3 /* UIImage+MobFox.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -185,12 +185,12 @@
 				A7992E931489362800E86AC8 /* DTXMLElement.h in Headers */,
 				A7992E971489362800E86AC8 /* MobFoxAdBrowserViewController.h in Headers */,
 				A7992E9B1489362800E86AC8 /* MobFoxBannerView.h in Headers */,
-				A7992E9F1489362800E86AC8 /* NSData+MobFoxBase64.h in Headers */,
 				A7992EA31489362800E86AC8 /* NSString+MobFox.h in Headers */,
 				A7992EA71489362800E86AC8 /* NSURL+MobFox.h in Headers */,
 				A7992EAB1489362800E86AC8 /* RedirectChecker.h in Headers */,
 				A7992EAF1489362800E86AC8 /* UIView+FindViewController.h in Headers */,
 				A7CDEF55148E76F200DD6D84 /* MobFox.h in Headers */,
+				A7785AD514EEA7F900F4BCA3 /* UIImage+MobFox.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,7 +198,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7992EC61489373000E86AC8 /* NSData+MobFoxBase64.h in Headers */,
 				A7992EC81489373000E86AC8 /* NSString+MobFox.h in Headers */,
 				A7992ECA1489373000E86AC8 /* NSURL+MobFox.h in Headers */,
 				A7992ECC1489373000E86AC8 /* RedirectChecker.h in Headers */,
@@ -208,6 +207,7 @@
 				A7992ED41489373000E86AC8 /* MobFoxAdBrowserViewController.h in Headers */,
 				A7992ED61489373000E86AC8 /* MobFoxBannerView.h in Headers */,
 				A7CDEF53148E76F100DD6D84 /* MobFox.h in Headers */,
+				A7785AD614EEA7F900F4BCA3 /* UIImage+MobFox.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,11 +325,11 @@
 				A7992E951489362800E86AC8 /* DTXMLElement.m in Sources */,
 				A7992E991489362800E86AC8 /* MobFoxAdBrowserViewController.m in Sources */,
 				A7992E9D1489362800E86AC8 /* MobFoxBannerView.m in Sources */,
-				A7992EA11489362800E86AC8 /* NSData+MobFoxBase64.m in Sources */,
 				A7992EA51489362800E86AC8 /* NSString+MobFox.m in Sources */,
 				A7992EA91489362800E86AC8 /* NSURL+MobFox.m in Sources */,
 				A7992EAD1489362800E86AC8 /* RedirectChecker.m in Sources */,
 				A7992EB11489362800E86AC8 /* UIView+FindViewController.m in Sources */,
+				A7785AD714EEA7F900F4BCA3 /* UIImage+MobFox.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,7 +337,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7992EC71489373000E86AC8 /* NSData+MobFoxBase64.m in Sources */,
 				A7992EC91489373000E86AC8 /* NSString+MobFox.m in Sources */,
 				A7992ECB1489373000E86AC8 /* NSURL+MobFox.m in Sources */,
 				A7992ECD1489373000E86AC8 /* RedirectChecker.m in Sources */,
@@ -346,6 +345,7 @@
 				A7992ED31489373000E86AC8 /* DTXMLElement.m in Sources */,
 				A7992ED51489373000E86AC8 /* MobFoxAdBrowserViewController.m in Sources */,
 				A7992ED71489373000E86AC8 /* MobFoxBannerView.m in Sources */,
+				A7785AD814EEA7F900F4BCA3 /* UIImage+MobFox.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@
 
 #import "NSData+MobFoxBase64.h"
 #import "NSURL+MobFox.h"
+#import "UIImage+MobFox.h"
 
 @interface MobFoxAdBrowserViewController () // private
 
@@ -71,8 +72,7 @@
 	[view addSubview:self.webView];
 	
 	
-	NSString *buttonBase64encoded = CLOSE_BUTTON_DATA;
-	UIImage *image = [UIImage imageWithData:[NSData MFdataFromBase64String:buttonBase64encoded]];
+	UIImage *image = [UIImage mobfoxAdCloseButtonImage];
 	
 	UIButton *btnClose=[UIButton buttonWithType:UIButtonTypeCustom];
 	[btnClose setImage:image forState:UIControlStateNormal];
