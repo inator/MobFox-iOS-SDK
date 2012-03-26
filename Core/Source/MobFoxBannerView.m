@@ -402,18 +402,18 @@ NSString * const MobFoxErrorDomain = @"MobFox";
     
     NSString* openUDID = [OpenUDID value];
 	
-    NSString *requestString=[NSString stringWithFormat:@"rt=%@&u=%@&o_mcmd5=%@&o_mcsha1=%@&v=%@&m=%@&s=%@&o_openudid=%@&iphone_osversion=%@&spot_id=%@",
-                             [requestType stringByUrlEncoding],
-                             [[self userAgent] stringByUrlEncoding],
+    NSString *requestString=[NSString stringWithFormat:@"rt=%@&u=%@&o_mcmd5=%@&o_mcsha1=%@&o_openudid=%@&v=%@&m=%@&s=%@&iphone_osversion=%@&spot_id=%@",
+                             [requestType stringByUrlEncoding], // rt
+                             [[self userAgent] stringByUrlEncoding], // u
                              [MD5MacAddress stringByUrlEncoding], // o_mcmd5
                              [SHA1MacAddress stringByUrlEncoding], // o_mcsha1
                              [openUDID stringByUrlEncoding], // o_openudid
-                             [SDK_VERSION stringByUrlEncoding],
-                             [m stringByUrlEncoding],
-                             [publisherId stringByUrlEncoding],
-                             [osVersion stringByUrlEncoding],
-                             [advertisingSection?advertisingSection:@"" stringByUrlEncoding]];
-	
+                             [SDK_VERSION stringByUrlEncoding], //v
+                             [m stringByUrlEncoding], // m
+                             [publisherId stringByUrlEncoding], // s
+                             [osVersion stringByUrlEncoding], // iPhone_osversion
+                             [advertisingSection?advertisingSection:@"" stringByUrlEncoding]]; // spot_id
+
 	NSURL *serverURL = [self serverURL];
 	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@?%@", serverURL, requestString]];
 	
