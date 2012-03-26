@@ -3,7 +3,7 @@
 //
 //  Created by Oliver Drobnik on 9/24/10.
 //  Copyright 2010 Drobnik.com. All rights reserved.
-//
+//  Modified by Michael Kaye sendmetospace.co.uk
 
 #import "MobFoxBannerView.h"
 #import "NSString+MobFox.h"
@@ -13,7 +13,8 @@
 #import "NSURL+MobFox.h"
 #import "MobFoxAdBrowserViewController.h"
 #import "RedirectChecker.h"
-
+#import "UIDevice+IdentifierAddition.h"
+#include "OpenUDID.h"
 
 NSString * const MobFoxErrorDomain = @"MobFox";
 
@@ -396,17 +397,22 @@ NSString * const MobFoxErrorDomain = @"MobFox";
 	NSString *m=@"live";
 	NSString *osVersion = [UIDevice currentDevice].systemVersion;
 	
-	NSString *cookieId = [[UIDevice currentDevice].uniqueIdentifier md5];
+    NSString *MD5MacAddress = [[UIDevice currentDevice] uniqueGlobalDeviceIdentifier];
+    NSString *SHA1MacAddress = [[UIDevice currentDevice] uniqueGlobalDeviceIdentifierSHA1];
+    
+    NSString* openUDID = [OpenUDID value];
 	
-	NSString *requestString=[NSString stringWithFormat:@"rt=%@&u=%@&o=%@&v=%@&m=%@&s=%@&iphone_osversion=%@&spot_id=%@",
-							 [requestType stringByUrlEncoding],
-							 [[self userAgent] stringByUrlEncoding],
-							 [cookieId stringByUrlEncoding],
-							 [SDK_VERSION stringByUrlEncoding],
-							 [m stringByUrlEncoding],
-							 [publisherId stringByUrlEncoding],
-							 [osVersion stringByUrlEncoding],
-							 [advertisingSection?advertisingSection:@"" stringByUrlEncoding]];
+    NSString *requestString=[NSString stringWithFormat:@"rt=%@&u=%@&o_mcmd5=%@&o_mcsha1=%@&v=%@&m=%@&s=%@&o_openudid=%@&iphone_osversion=%@&spot_id=%@",
+                             [requestType stringByUrlEncoding],
+                             [[self userAgent] stringByUrlEncoding],
+                             [MD5MacAddress stringByUrlEncoding], // o_mcmd5
+                             [SHA1MacAddress stringByUrlEncoding], // o_mcsha1
+                             [openUDID stringByUrlEncoding], // o_openudid
+                             [SDK_VERSION stringByUrlEncoding],
+                             [m stringByUrlEncoding],
+                             [publisherId stringByUrlEncoding],
+                             [osVersion stringByUrlEncoding],
+                             [advertisingSection?advertisingSection:@"" stringByUrlEncoding]];
 	
 	NSURL *serverURL = [self serverURL];
 	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@?%@", serverURL, requestString]];

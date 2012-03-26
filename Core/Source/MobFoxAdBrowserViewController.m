@@ -3,11 +3,11 @@
 //
 //  Created by Oliver Drobnik on 9/24/10.
 //  Copyright 2010 Drobnik.com. All rights reserved.
-//
+//  Modified by Michael Kaye sendmetospace.co.uk
 
 #import "MobFoxAdBrowserViewController.h"
 
-#import "NSData+MobFoxBase64.h"
+//#import "NSData+MobFoxBase64.h"
 #import "NSURL+MobFox.h"
 #import "UIImage+MobFox.h"
 

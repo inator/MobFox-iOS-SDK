@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F6E4C6A1520A007000A1085 /* OpenUDID.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F6E4C661520A007000A1085 /* OpenUDID.h */; };
+		0F6E4C6B1520A007000A1085 /* OpenUDID.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F6E4C661520A007000A1085 /* OpenUDID.h */; };
+		0F6E4C6C1520A007000A1085 /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E4C671520A007000A1085 /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0F6E4C6D1520A007000A1085 /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E4C671520A007000A1085 /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0F6E4C6E1520A007000A1085 /* UIDevice+IdentifierAddition.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F6E4C681520A007000A1085 /* UIDevice+IdentifierAddition.h */; };
+		0F6E4C6F1520A007000A1085 /* UIDevice+IdentifierAddition.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F6E4C681520A007000A1085 /* UIDevice+IdentifierAddition.h */; };
+		0F6E4C701520A007000A1085 /* UIDevice+IdentifierAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E4C691520A007000A1085 /* UIDevice+IdentifierAddition.m */; };
+		0F6E4C711520A007000A1085 /* UIDevice+IdentifierAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E4C691520A007000A1085 /* UIDevice+IdentifierAddition.m */; };
 		A7785AD514EEA7F900F4BCA3 /* UIImage+MobFox.h in Headers */ = {isa = PBXBuildFile; fileRef = A7785AD314EEA7F900F4BCA3 /* UIImage+MobFox.h */; };
 		A7785AD614EEA7F900F4BCA3 /* UIImage+MobFox.h in Headers */ = {isa = PBXBuildFile; fileRef = A7785AD314EEA7F900F4BCA3 /* UIImage+MobFox.h */; };
 		A7785AD714EEA7F900F4BCA3 /* UIImage+MobFox.m in Sources */ = {isa = PBXBuildFile; fileRef = A7785AD414EEA7F900F4BCA3 /* UIImage+MobFox.m */; };
@@ -49,6 +57,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F6E4C661520A007000A1085 /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
+		0F6E4C671520A007000A1085 /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
+		0F6E4C681520A007000A1085 /* UIDevice+IdentifierAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+IdentifierAddition.h"; sourceTree = "<group>"; };
+		0F6E4C691520A007000A1085 /* UIDevice+IdentifierAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+IdentifierAddition.m"; sourceTree = "<group>"; };
 		A746A63914B9DD110019992F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A7785AD314EEA7F900F4BCA3 /* UIImage+MobFox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MobFox.h"; sourceTree = "<group>"; };
 		A7785AD414EEA7F900F4BCA3 /* UIImage+MobFox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MobFox.m"; sourceTree = "<group>"; };
@@ -133,6 +145,10 @@
 		A7992EB41489363E00E86AC8 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				0F6E4C661520A007000A1085 /* OpenUDID.h */,
+				0F6E4C671520A007000A1085 /* OpenUDID.m */,
+				0F6E4C681520A007000A1085 /* UIDevice+IdentifierAddition.h */,
+				0F6E4C691520A007000A1085 /* UIDevice+IdentifierAddition.m */,
 				A7992E801489362800E86AC8 /* NSString+MobFox.h */,
 				A7992E811489362800E86AC8 /* NSString+MobFox.m */,
 				A7992E821489362800E86AC8 /* NSURL+MobFox.h */,
@@ -191,6 +207,8 @@
 				A7992EAF1489362800E86AC8 /* UIView+FindViewController.h in Headers */,
 				A7CDEF55148E76F200DD6D84 /* MobFox.h in Headers */,
 				A7785AD514EEA7F900F4BCA3 /* UIImage+MobFox.h in Headers */,
+				0F6E4C6A1520A007000A1085 /* OpenUDID.h in Headers */,
+				0F6E4C6E1520A007000A1085 /* UIDevice+IdentifierAddition.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +226,8 @@
 				A7992ED61489373000E86AC8 /* MobFoxBannerView.h in Headers */,
 				A7CDEF53148E76F100DD6D84 /* MobFox.h in Headers */,
 				A7785AD614EEA7F900F4BCA3 /* UIImage+MobFox.h in Headers */,
+				0F6E4C6B1520A007000A1085 /* OpenUDID.h in Headers */,
+				0F6E4C6F1520A007000A1085 /* UIDevice+IdentifierAddition.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +350,8 @@
 				A7992EAD1489362800E86AC8 /* RedirectChecker.m in Sources */,
 				A7992EB11489362800E86AC8 /* UIView+FindViewController.m in Sources */,
 				A7785AD714EEA7F900F4BCA3 /* UIImage+MobFox.m in Sources */,
+				0F6E4C6C1520A007000A1085 /* OpenUDID.m in Sources */,
+				0F6E4C701520A007000A1085 /* UIDevice+IdentifierAddition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +368,8 @@
 				A7992ED51489373000E86AC8 /* MobFoxAdBrowserViewController.m in Sources */,
 				A7992ED71489373000E86AC8 /* MobFoxBannerView.m in Sources */,
 				A7785AD814EEA7F900F4BCA3 /* UIImage+MobFox.m in Sources */,
+				0F6E4C6D1520A007000A1085 /* OpenUDID.m in Sources */,
+				0F6E4C711520A007000A1085 /* UIDevice+IdentifierAddition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +389,7 @@
 				GCC_PREFIX_HEADER = "Core/MobFox-Prefix.pch";
 				INFOPLIST_FILE = "Core/MobFox-Info.plist";
 				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				LINK_WITH_STANDARD_LIBRARIES = NO;
 				MACH_O_TYPE = mh_object;
 				PRODUCT_NAME = MobFox;
@@ -387,6 +412,7 @@
 				GCC_PREFIX_HEADER = "Core/MobFox-Prefix.pch";
 				INFOPLIST_FILE = "Core/MobFox-Info.plist";
 				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				LINK_WITH_STANDARD_LIBRARIES = NO;
 				MACH_O_TYPE = mh_object;
 				PRODUCT_NAME = MobFox;
@@ -401,7 +427,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Core/MobFox-Prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = MobFox;
 				PUBLIC_HEADERS_FOLDER_PATH = MobFox;
@@ -414,7 +440,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Core/MobFox-Prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = MobFox;
 				PUBLIC_HEADERS_FOLDER_PATH = MobFox;
