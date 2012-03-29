@@ -11,5 +11,7 @@
 @interface UIImage (MobFox)
 
 + (UIImage *)mobfoxAdCloseButtonImage;
++ (UIImage *)mobfoxSkipButtonImage;
++ (UIImage *)mobfoxSkipButtonDisabledImage;
 
 @end

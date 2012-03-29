@@ -42,7 +42,7 @@
 		[_delegate checker:self detectedRedirectionTo:[request URL]];
 		
 		[_connection cancel];
-
+        
 		return nil;
 	}
 	

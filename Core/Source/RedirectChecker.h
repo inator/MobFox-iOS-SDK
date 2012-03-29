@@ -39,7 +39,7 @@
 
 @property (nonatomic, assign) __unsafe_unretained id <RedirectCheckerDelegate> delegate;
 
-@property (nonatomic, retain) NSString *mimeType;
-@property (nonatomic, retain) NSString *textEncodingName;
+@property (nonatomic, strong) NSString *mimeType;
+@property (nonatomic, strong) NSString *textEncodingName;
 
 @end

@@ -44,8 +44,8 @@
 	BOOL doneLoading;
 }
 
-@property (nonatomic, retain) NSURL *url;
-@property (nonatomic, retain) DTXMLElement *documentRoot;
+@property (nonatomic, strong) NSURL *url;
+@property (nonatomic, strong) DTXMLElement *documentRoot;
 @property (nonatomic, assign) __unsafe_unretained id <DTXMLDocumentDelegate> delegate;
 @property (nonatomic, readonly) BOOL doneLoading;
 

@@ -17,10 +17,10 @@
 	__unsafe_unretained DTXMLElement *parent;
 }
 
-@property (nonatomic, retain) NSString *name;
-@property (nonatomic, retain) NSMutableString *text;
-@property (nonatomic, retain) NSMutableArray *children;
-@property (nonatomic, retain) NSMutableDictionary *attributes;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSMutableString *text;
+@property (nonatomic, strong) NSMutableArray *children;
+@property (nonatomic, strong) NSMutableDictionary *attributes;
 @property (nonatomic, assign) __unsafe_unretained DTXMLElement *parent;
 
 
@@ -31,8 +31,8 @@
 - (void) changeTextForNamedChild:(NSString *)childName toText:(NSString *)newText;
 - (DTXMLElement *) addChildWithName:(NSString *)childName text:(NSString *)childText;
 
-@property (nonatomic, readonly) NSString *title;
-@property (nonatomic, readonly) NSURL *link;
-@property (nonatomic, readonly) NSString *content;
+@property (unsafe_unretained, nonatomic, readonly) NSString *title;
+@property (unsafe_unretained, nonatomic, readonly) NSURL *link;
+@property (unsafe_unretained, nonatomic, readonly) NSString *content;
 
 @end

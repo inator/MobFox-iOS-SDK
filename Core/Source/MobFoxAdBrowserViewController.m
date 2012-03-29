@@ -3,7 +3,7 @@
 //
 //  Created by Oliver Drobnik on 9/24/10.
 //  Copyright 2010 Drobnik.com. All rights reserved.
-//  Modified by Michael Kaye sendmetospace.co.uk
+//
 
 #import "MobFoxAdBrowserViewController.h"
 
@@ -13,10 +13,10 @@
 
 @interface MobFoxAdBrowserViewController () // private
 
-@property (nonatomic, retain) NSMutableData *receivedData;
-@property (nonatomic, retain) NSString *mimeType;
-@property (nonatomic, retain) NSString *textEncodingName;
-@property (nonatomic, retain) NSURL *url;
+@property (nonatomic, strong) NSMutableData *receivedData;
+@property (nonatomic, strong) NSString *mimeType;
+@property (nonatomic, strong) NSString *textEncodingName;
+@property (nonatomic, strong) NSURL *url;
 
 @end
 
@@ -54,26 +54,37 @@
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView 
 {
-	CGRect mainFrame = [UIScreen mainScreen].applicationFrame;
+    if (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPhone)
+    {
+        buttonSize = 30.0f;
+    }
+    else
+    {
+        buttonSize = 50.0f;
+    }
+    
+    CGRect mainFrame = [UIScreen mainScreen].applicationFrame;
 	
-	UIView *view = [[UIView alloc] initWithFrame:mainFrame];
+	self.view = [[UIView alloc] initWithFrame:mainFrame];
 	
-	view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+	self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	
-	self.webView.frame = view.bounds;
-	[view addSubview:self.webView];
+	self.webView.frame = self.view.bounds;
+	[self.view addSubview:self.webView];
 	
 	
-	UIImage *image = [UIImage mobfoxAdCloseButtonImage];
+	UIImage *image = [UIImage mobfoxSkipButtonImage];
 	
+    // We need skip buttons to be a bit bigger so override
+    float skipButtonSize = buttonSize +4.0f;
+    
 	UIButton *btnClose=[UIButton buttonWithType:UIButtonTypeCustom];
 	[btnClose setImage:image forState:UIControlStateNormal];
 	[btnClose addTarget:self action:@selector(dismiss:) forControlEvents:UIControlEventTouchUpInside];
-	[btnClose setFrame:CGRectMake(view.bounds.size.width - 32, 3, 32, 32)];
+	[btnClose setFrame:CGRectMake(self.view.bounds.size.width - (skipButtonSize+10.0f), 10, skipButtonSize, skipButtonSize)];
 	btnClose.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin;
-	[view addSubview:btnClose];
+	[self.view addSubview:btnClose];
 	
-	self.view = view;
 }
 
 - (UIWebView *)webView
@@ -136,13 +147,11 @@
 }
 
 
-/*
- // Override to allow orientations other than the default portrait orientation.
- - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
- // Return YES for supported orientations
- return (interfaceOrientation == UIInterfaceOrientationPortrait);
- }
- */
+// Override to allow orientations other than the default portrait orientation.
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    return YES;
+}
+
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.

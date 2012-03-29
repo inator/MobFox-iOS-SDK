@@ -28,13 +28,15 @@
 	NSString *textEncodingName;
 	NSMutableData *receivedData;
 	
+    float buttonSize;
+    
 	__unsafe_unretained id <MobFoxAdBrowserViewController> delegate;
 }
 
-@property (nonatomic, retain) NSString *userAgent;
-@property (nonatomic, readonly, retain) NSURL  *url;
+@property (nonatomic, strong) NSString *userAgent;
+@property (nonatomic, readonly, strong) NSURL  *url;
 
-@property (nonatomic, retain) UIWebView *webView;
+@property (nonatomic, strong) UIWebView *webView;
 
 @property (nonatomic, assign) __unsafe_unretained id <MobFoxAdBrowserViewController> delegate;
 
